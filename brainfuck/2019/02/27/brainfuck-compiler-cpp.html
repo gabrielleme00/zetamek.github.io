@@ -7,17 +7,18 @@
 <meta name="generator" content="Jekyll v3.8.5" />
 <meta property="og:title" content="How to Make a Brainfuck Interpreter in C++" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Today I want to show a brainfuck interpreter made in C++." />
-<meta property="og:description" content="Today I want to show a brainfuck interpreter made in C++." />
-<link rel="canonical" href="zetamek.github.io/brainfuck/2019/02/27/brainfuck-compiler-cpp.html" />
-<meta property="og:url" content="zetamek.github.io/brainfuck/2019/02/27/brainfuck-compiler-cpp.html" />
+<meta name="description" content="Brainfuck is an esoteric programming language created to… well, you know. I thought creating an interpreter for it would be cool, so here is a tutorial!" />
+<meta property="og:description" content="Brainfuck is an esoteric programming language created to… well, you know. I thought creating an interpreter for it would be cool, so here is a tutorial!" />
+<link rel="canonical" href="http://localhost:4000/brainfuck/2019/02/27/brainfuck-compiler-cpp.html" />
+<meta property="og:url" content="http://localhost:4000/brainfuck/2019/02/27/brainfuck-compiler-cpp.html" />
 <meta property="og:site_name" content="Zetamek.gihub.io" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2019-02-27T18:42:15-03:00" />
 <script type="application/ld+json">
-{"description":"Today I want to show a brainfuck interpreter made in C++.","@type":"BlogPosting","url":"zetamek.github.io/brainfuck/2019/02/27/brainfuck-compiler-cpp.html","headline":"How to Make a Brainfuck Interpreter in C++","datePublished":"2019-02-27T18:42:15-03:00","dateModified":"2019-02-27T18:42:15-03:00","mainEntityOfPage":{"@type":"WebPage","@id":"zetamek.github.io/brainfuck/2019/02/27/brainfuck-compiler-cpp.html"},"@context":"http://schema.org"}</script>
+{"description":"Brainfuck is an esoteric programming language created to… well, you know. I thought creating an interpreter for it would be cool, so here is a tutorial!","@type":"BlogPosting","url":"http://localhost:4000/brainfuck/2019/02/27/brainfuck-compiler-cpp.html","headline":"How to Make a Brainfuck Interpreter in C++","datePublished":"2019-02-27T18:42:15-03:00","dateModified":"2019-02-27T18:42:15-03:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/brainfuck/2019/02/27/brainfuck-compiler-cpp.html"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="zetamek.github.io/feed.xml" title="Zetamek.gihub.io" /></head>
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Zetamek.gihub.io" /><link rel="stylesheet" type="text/css" href="/css/common.css">
+</head>
 <body><header class="site-header" role="banner">
 
   <div class="wrapper"><a class="site-title" rel="author" href="/">Zetamek.gihub.io</a><nav class="site-nav">
@@ -35,15 +36,16 @@
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <h1>How to Make a Brainfuck Interpreter in C++</h1>
-<p class="post-meta">27 Feb 2019</p>
+        <p class="post-meta">27 Feb 2019</p>
+<h1>How to Make a Brainfuck Interpreter in C++</h1>
 
-<p>Today I want to show a brainfuck interpreter made in C++.</p>
+<p>Brainfuck is an esoteric programming language created to… well, you know.
+I thought creating an interpreter for it would be cool, so here is a tutorial!</p>
 
 <p>I will explain each step of the thinking process.
 The final result can be seen <a href="https://gist.github.com/zetamek/b4cd86a8e148b1a20af13b6c6029ef66">in this gist</a>.</p>
 
-<p>Also, I’ll assume you know how to compile a C++ program and jump right to the point.
+<p>Also, I’ll assume you know how to compile a C++ program so that i can jump right to the point.
 I like to use G++ on Linux, as it’s simple like that: <code class="highlighter-rouge">g++ -o &lt;output&gt; &lt;source&gt;.cpp</code>.</p>
 
 <p>You can try Brainfuck online <a href="https://fatiherikli.github.io/brainfuck-visualizer/">in this cool page</a> by fatiherikli.</p>
