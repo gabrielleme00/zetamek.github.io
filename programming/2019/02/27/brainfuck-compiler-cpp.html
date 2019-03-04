@@ -9,15 +9,15 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Brainfuck is an esoteric programming language created to… well, you know. I thought creating an interpreter for it would be cool, so here is a tutorial!" />
 <meta property="og:description" content="Brainfuck is an esoteric programming language created to… well, you know. I thought creating an interpreter for it would be cool, so here is a tutorial!" />
-<link rel="canonical" href="http://localhost:4000/brainfuck/2019/02/27/brainfuck-compiler-cpp.html" />
-<meta property="og:url" content="http://localhost:4000/brainfuck/2019/02/27/brainfuck-compiler-cpp.html" />
+<link rel="canonical" href="zetamek.github.io/programming/2019/02/27/brainfuck-compiler-cpp.html" />
+<meta property="og:url" content="zetamek.github.io/programming/2019/02/27/brainfuck-compiler-cpp.html" />
 <meta property="og:site_name" content="Zetamek.gihub.io" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2019-02-27T18:42:15-03:00" />
 <script type="application/ld+json">
-{"description":"Brainfuck is an esoteric programming language created to… well, you know. I thought creating an interpreter for it would be cool, so here is a tutorial!","@type":"BlogPosting","url":"http://localhost:4000/brainfuck/2019/02/27/brainfuck-compiler-cpp.html","headline":"How to Make a Brainfuck Interpreter in C++","datePublished":"2019-02-27T18:42:15-03:00","dateModified":"2019-02-27T18:42:15-03:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/brainfuck/2019/02/27/brainfuck-compiler-cpp.html"},"@context":"http://schema.org"}</script>
+{"description":"Brainfuck is an esoteric programming language created to… well, you know. I thought creating an interpreter for it would be cool, so here is a tutorial!","@type":"BlogPosting","url":"zetamek.github.io/programming/2019/02/27/brainfuck-compiler-cpp.html","headline":"How to Make a Brainfuck Interpreter in C++","datePublished":"2019-02-27T18:42:15-03:00","dateModified":"2019-02-27T18:42:15-03:00","mainEntityOfPage":{"@type":"WebPage","@id":"zetamek.github.io/programming/2019/02/27/brainfuck-compiler-cpp.html"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Zetamek.gihub.io" /><link rel="stylesheet" type="text/css" href="/css/common.css">
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="zetamek.github.io/feed.xml" title="Zetamek.gihub.io" /><link rel="stylesheet" type="text/css" href="/css/common.css">
 </head>
 <body><header class="site-header" role="banner">
 
@@ -50,7 +50,6 @@ I like to use G++ on Linux, as it’s simple like that: <code class="highlighter
 
 <p>You can try Brainfuck online <a href="https://fatiherikli.github.io/brainfuck-visualizer/">in this cool page</a> by fatiherikli.</p>
 
-<p><br /></p>
 <h2>So, how the f* does Brainfuck work?</h2>
 <p>Brainfuck has a tape of 30.000 bytes, where the initial value of each byte is zero.
 Also, there is a pointer, which begins pointing to the first byte of the tape:</p>
@@ -106,7 +105,6 @@ Then, it starts a loop: go right, increase 2, go left, decrease 1.</p>
 
 <p>The loop stops when the current byte at <code class="highlighter-rouge">]</code> is zero.</p>
 
-<p><br /></p>
 <h2>1. First things first</h2>
 <p>We will need the <code class="highlighter-rouge">iostream</code> header to get input with <code class="highlighter-rouge">std::cin()</code>.
 The <code class="highlighter-rouge">stdio.h</code> header is not necessary in some C++ compilers (like g++), though
@@ -126,7 +124,6 @@ we need a pointer pointing to the first byte of the tape:</p>
 
 <p>The size of a <code class="highlighter-rouge">char</code> in C/C++ is always 1 byte.</p>
 
-<p><br /></p>
 <h2>2. The main() function</h2>
 <p>Now, we create an input string of 1024 bytes, get the input, <code class="highlighter-rouge">interpret()</code> the string,
 and print a new line. Nothing really fancy.</p>
@@ -145,7 +142,6 @@ and print a new line. Nothing really fancy.</p>
 
 <p>Now, we must implement the <code class="highlighter-rouge">interpret()</code> function…</p>
 
-<p><br /></p>
 <h2>3. The interpret() function</h2>
 <p>This function loops through each <code class="highlighter-rouge">char</code> of the input string and interprets it.</p>
 
@@ -200,7 +196,6 @@ and print a new line. Nothing really fancy.</p>
 <p>As you can see, we can use <code class="highlighter-rouge">++*ptr;</code> and <code class="highlighter-rouge">--*ptr</code> the move the pointer 1 byte left or right.
 It’s an unusual move if you didn’t mess with pointers too much before.</p>
 
-<p><br /></p>
 <h2>4. The (confusing) loops</h2>
 <p>Don’t worry if you don’t understand it at first, this part is kinda tricky as we are messing with
 two different pointers at the same time.
@@ -233,7 +228,6 @@ If you think enough about it, you’ll get it, though :)</p>
 				<span class="n">loop</span><span class="o">++</span><span class="p">;</span>
 		<span class="p">}</span>
 	<span class="p">}</span>
-<span class="p">}</span>
 </code></pre></div></div>
 
 <p>What happens is, if we find a <code class="highlighter-rouge">[</code>, keep looping until we find it’s matching <code class="highlighter-rouge">]</code>. If we happen to find another
@@ -241,7 +235,6 @@ If you think enough about it, you’ll get it, though :)</p>
 
 <p>The same happens for the <code class="highlighter-rouge">]</code>, but it seeks it’s matching <code class="highlighter-rouge">[</code>.</p>
 
-<p><br /></p>
 <h2>And more, much more than this...</h2>
 <strike>...I did it my way.</strike>
 <p>Now go ahead and make it better. Maybe try to make a loop for the user to always input a new string after the

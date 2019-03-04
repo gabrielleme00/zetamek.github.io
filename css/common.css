@@ -7,6 +7,10 @@ h1, h2 {
 	font-weight: bold;
 }
 
+h2 {
+	margin-top: 50px;
+}
+
 a {
 	color: #399391 !important;
 }
