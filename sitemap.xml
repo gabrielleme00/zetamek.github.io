@@ -1,24 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url>
-<loc>zetamek.github.io/site/2019/02/27/hello-world.html</loc>
-<lastmod>2019-02-27T17:49:15-03:00</lastmod>
-</url>
-<url>
-<loc>zetamek.github.io/programming/2019/02/27/brainfuck-compiler-cpp.html</loc>
-<lastmod>2019-02-27T18:42:15-03:00</lastmod>
-</url>
-<url>
-<loc>zetamek.github.io/programming/2019/02/27/hexdump-cpp.html</loc>
-<lastmod>2019-02-27T18:42:15-03:00</lastmod>
-</url>
-<url>
-<loc>zetamek.github.io/about/</loc>
-</url>
-<url>
-<loc>zetamek.github.io/blog/</loc>
-</url>
-<url>
-<loc>zetamek.github.io/</loc>
-</url>
+  <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>zetamek.github.io/site/2019/02/27/</loc>
+    <lastmod>2019-02-27T17:49:15-03:00</lastmod>
+  </url>
+  <url>
+    <loc>zetamek.github.io/about/</loc>
+  </url>
+  <url>
+    <loc>zetamek.github.io/blog/</loc>
+  </url>
+  <url>
+    <loc>zetamek.github.io/</loc>
+  </url>
 </urlset>
