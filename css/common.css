@@ -2,6 +2,10 @@ body {
 	color: #535358;
 }
 
+.align-right {
+	float: right;
+}
+
 canvas, #jumbotron {
 	width: 100%!important;
 	height: 100%!important;
@@ -68,8 +72,8 @@ p {
 }
 
 .page-link:hover {
-	/*color: #65c6c4 !important;*/
-	text-decoration: underline;
+	color: #65c6c4 !important;
+	text-decoration: none;
 }
 
 .hero {
@@ -131,4 +135,44 @@ pre, code {
 
 code {
 	color: #ecedeb;
+}
+
+.portfolio-entry {
+	margin-bottom: 1rem;
+	display: inline-block;
+	background: rgba(57, 147, 145, 1);
+	cursor: pointer;
+	position: relative;
+	width: 49%;
+	text-align: center;
+}
+
+.portfolio-entry-img {
+	-webkit-transition: opacity 500ms;
+	-moz-transition: opacity 500ms;
+	-o-transition: opacity 500ms;
+	transition: opacity 500ms;
+}
+
+.portfolio-entry:hover .portfolio-entry-img {
+	opacity: .05;
+}
+
+.portfolio-entry:hover .portfolio-entry-text {
+	opacity: 1;
+}
+
+.portfolio-entry-text {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: white;
+	opacity: 0;
+	font-weight: 400;
+
+	-webkit-transition: opacity 500ms;
+	-moz-transition: opacity 500ms;
+	-o-transition: opacity 500ms;
+	transition: opacity 500ms;
 }
