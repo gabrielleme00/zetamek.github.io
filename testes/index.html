@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lord Clauds</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section id="parte1">
+        <div>Tinky-Winky</div>
+        <div>Dipsy</div>
+        <div>Laa Laa</div>
+        <div>Po</div>
+        <div>Bebê Sol</div>
+    </section>
+    <section id="parte2">
+        <div>Capitão Arqueiro</div>
+        <div>Formiga América</div>
+        <div>Gavião Homem</div>
+        <div>Viúva Aranha</div>
+        <div>Negra de Ferro</div>
+    </section>
+    <section>
+        <table>
+            <thead>
+                <tr>
+                    <th>Linguagem</th>
+                    <th>"Hello World"</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>PHP</td>
+                    <td>echo "Hello World";</td>
+                </tr>
+                <tr>
+                    <td>Python</td>
+                    <td>print("Hello World")</td>
+                </tr>
+                <tr>
+                    <td>C</td>
+                    <td>printf("Hello World");</td>
+                </tr>
+                <tr>
+                    <td>C#</td>
+                    <td>Console.WriteLine("Hello World");</td>
+                </tr>
+                <tr>
+                    <td>Java</td>
+                    <td>System.out.println("Hello World");</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- jQuery 3.4.1 Uncompressed-->
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous">
+    </script>
+
+    <!-- #parte2 -->
+    <script>
+        $('#parte2 div').hover(function() {
+            const children = $('#parte2').children();
+
+            switch(this) {
+                case children[0]:
+                case children[2]:
+                    $(this).addClass('onHover1');
+                    break;
+                case children[1]:
+                case children[3]:
+                    $(this).addClass('onHover2');
+                    alert('Para Roberta');
+                    break;
+            }
+        }, function() {
+            $(this).removeClass('onHover1');
+            $(this).removeClass('onHover2');
+        });
+    </script>
+</body>
+</html>
