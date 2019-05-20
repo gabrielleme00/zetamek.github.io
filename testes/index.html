@@ -62,25 +62,27 @@
         crossorigin="anonymous">
     </script>
 
-    <!-- #parte2 -->
+    <!-- #parte2 anim. -->
     <script>
         $('#parte2 div').hover(function() {
-            const children = $('#parte2').children();
+            const index = $('#parte2 div').index(this);
 
-            switch(this) {
-                case children[0]:
-                case children[2]:
-                    $(this).addClass('onHover1');
+            switch(index) {
+                case 0:
+                case 2:
+                    $(this).addClass("onHover1");
                     break;
-                case children[1]:
-                case children[3]:
-                    $(this).addClass('onHover2');
-                    alert('Para Roberta');
+                case 1:
+                case 3:
+                    $(this).addClass("onHover2");
+                    break;
+                default:
+                    alert("Para Roberta");
                     break;
             }
         }, function() {
-            $(this).removeClass('onHover1');
-            $(this).removeClass('onHover2');
+            $(this).removeClass("onHover1");
+            $(this).removeClass("onHover2");
         });
     </script>
 </body>
